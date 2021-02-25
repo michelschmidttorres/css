@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Selectors</title>
+    <link rel="stylesheet" href="css/tag.css">
+    <style>
+        /* Seletor univeral */
+        /* * {
+            color: #ff0;
+            background-color: #f77;
+       } */
+
+        /* Seletor de classe */
+        /* .tag {
+            color: #ff0;
+            background-color: #f77;
+       } */
+
+        /* Seletor de id */
+        /* #aprovados {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+        /* Pegar o elemento espec. que está imediatamente abaixo */
+        /* #aninhado > div {
+            color: #ff0;
+            background-color: #f77;
+        } */
+        
+        /* Aplicar a qualquer descendente com a tag especificada */
+        /* #aninhado section {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+        /* Aplicar ao elemento adjacente(vizinho) - no caso abaixo aplica ul que vem
+        depois de p */
+        /* p + ul {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+        /* Aplicar ao elemento mais próximo dentro da mesma tag pai  */
+        /* p ~ ol {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+        /* Aplicar a um atributo de uma tag ou atributo com seu valor, o valor é opcional */
+        /* É possível usar outros recursos ao procurar o valor do atributo
+        "~=" vai procurar por elementos que começem com determinada expressão
+        "*=" vai procurar elementos que contenham determinada expressão */
+        /* [feira=casa] {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+        /* Aplicar ao primeiro filho de alguém que tenha determinada tag
+        no nosso caso não aplica pq o primeiro filho é o label que está
+        sendo inserido pelo JS 
+        nth-child(odd) - pegar filhos ímpares
+        nth-child(even) - pegar filhos pares */
+       /* span:nth-child(1) {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+
+    </style>
+</head>
+
+<body>
+    <div class='tag'>
+        <div class='tag'>
+            <p class='tag'>1</p>
+            <ul class='tag' feira='casa'>
+                <li>Arroz</li>
+                <li>Feijão</li>
+            </ul>
+            <ul class='tag' feira='escritorio empresa'>
+                <li>Café</li>
+                <li>Água</li>
+            </ul>
+            <ol id='aprovados' class='tag'>
+                <li>Maria</li>
+                <li>Pedro</li>
+                <li>Ana</li>
+            </ol>
+            <div id='aninhado' class='tag'>
+                <div class="tag">
+                    <section class='tag'>
+                        <span class='tag'>1</span>
+                        <p class='tag'>2</p>
+                        <span class='tag'>3</span>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/tag.js"></script>
+</body>
+
+</html>

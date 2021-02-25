@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  background-color: snow;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+
+  grid-template-rows: auto auto 1fr auto auto auto;
+  gap: 24px;
+}
+
+
+@media (min-width: 720px) {
+  .container {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto 1fr auto;
+  }
+
+  /* The header section takes 12 columns */
+  .container .header {
+    grid-column: 1 / span 12;
+  }
+
+  /* The navigation section also takes 12 columns */
+  .container .navigation {
+    grid-column: 1 / span 12;
+  }
+
+  /* The main section takes 10 columns start from column 3 */
+  .container .main {
+    grid-column: 3 / span 10;
+  }
+
+  /* The sidebar takes 2 columns start from column 1 */
+  .container .sidebar {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+  }
+
+  /* The ads section takes 2 columns start from column 1 */
+  .container .ads {
+    grid-column: 1 / span 2;
+  }
+
+  /* The footer section takes 10 columns start from column 3 */
+  .container .footer {
+    grid-column: 3 / span 10;
+  }
+}
+
+@media (min-width: 1020px) { 
+
+    .container .navigation {
+        grid-column: 3 / span 8;
+    }
+
+    .container .sidebar {
+        grid-row: 2 / 4;
+    }
+
+    .container .main {
+        grid-column: 3 / span 8;
+    }
+
+    .container .ads {
+        grid-column: 11 / span 2;
+        grid-row: 2 / 4;
+    }
+
+    .container .footer {
+        grid-column: 1 / span 12;
+    }
+}
+
+.element {
+  border: solid 4px tomato;
+}

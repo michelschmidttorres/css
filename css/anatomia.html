@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Anatomia CSS</title>
+    <style>
+        .seletor {
+            color: #fff;
+            font-size: 30px;
+            text-align: center;
+            /* multiplos valores */
+            border: solid 5px navy; /* shorthand property */
+            font-family: Helvetica, monospace; /* Múltipla escolhas, se uma não der certo pega a outra */
+            /* funções */
+            width: calc(100% - 100px);
+            background-color: rgb(34, 153, 189);
+        }
+
+        /* Usando uma pseudo classe - No caso abaixo aplica um estilo quando o mouse passa pelo elemento */
+        .seletor:hover {
+            background-color: orangered;
+        }
+
+        /* Usando um pseudo-elemento  */
+        .seletor::first-letter {
+            font-size: 60px;
+            font-weight: bold;
+        }
+
+        /* padrão de nomenclatura */
+        /* dash-case ou camelCase? */
+        /* Use o que achar melhor mas matenha um melhor */
+
+    </style>
+</head>
+
+<body>
+    <div class="seletor">Conteúdo</div>
+</body>
+
+</html>

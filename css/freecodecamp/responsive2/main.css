@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  background-color: snow;
+}
+
+.container .header {
+  grid-area: header;
+}
+
+.container .navigation {
+  grid-area: nav;
+}
+
+.container .ads {
+  grid-area: ads;
+}
+
+.container .sidebar {
+  grid-area: sidebar;
+}
+
+.container .main {
+  grid-area: main;
+}
+
+.container .footer {
+  grid-area: footer;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+
+  gap: 24px;
+
+  /* Creating 6 rows and 3rd row expands as much as it can   */
+  grid-template-rows: auto auto 1fr auto auto auto;
+
+  /* Defining the template */
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "sidebar"
+    "ads"
+    "footer";
+}
+
+@media (min-width: 720px) {
+  .container {
+    /* Creating 4 rows and the 3rd row expands as much as it can */
+    grid-template-rows: auto auto 1fr auto;
+      
+    /* Defining the template (4 columns) */
+    grid-template-areas:
+      "header header header header"
+      "nav nav nav nav"
+      "sidebar main main main"
+      "ads footer footer footer";
+  }
+}
+
+@media (min-width: 1020px) {
+  .container {
+    /* Creating 4 rows and the 3rd row expands as much as it can */
+    grid-template-rows: auto auto 1fr auto;
+      
+    /* Defining the template (6 columns) */
+    grid-template-areas:
+      "header header header header header header"
+      "sidebar nav nav nav nav  ads"
+      "sidebar main main main main ads"
+      "footer footer footer footer footer footer";
+  }
+}
+
+.element {
+  border: solid 4px tomato;
+}
